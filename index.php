@@ -19,10 +19,9 @@
             <li>
                 <a href="https://www.24h.com.vn/" target="_blank" >24h.com.vn</a>
             </li>
-        </ul>
+        <div class=picture style="margin-left: 30px; width: 300px; height: 400px;">
+            <img src="../images/duy.jpg" width="300px" height="400px">
+        </div>
     </div >
-<div class=picture>
-    <img src="../images/duy.jpg" width="200px" height="400px">
-</div>
  </body>
 </html>
