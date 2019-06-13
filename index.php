@@ -20,7 +20,7 @@
  <body>
     <h2><span>S</span>ome Informations about me:</h2>
     <div id="content" class="container" style="width: 960px; border: 1px solid #333; padding: 10px;">
-        <div class="pictute" style="width: 240px; height: 300px; border-color: black; border: dashed; ">
+        <div class="pictute" style="width: 240px; margin-right: 700px; height: 300px; border-color: black; border: dashed; ">
             <img src="../images/duy.jpg" style="width: 240px; height: 300px; float: left;"> 
         </div>
         <div class="infor" style="margin-left: 50px; float: right;">
