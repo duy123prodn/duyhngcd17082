@@ -10,7 +10,7 @@
  </head>
  <body>
     <ul>
-        <li>SOME MY INFORMATIONS</li>
+        <li><span>S</spam>OME MY INFORMATIONS</li></br>
         <li>Full Name: Ho Nhat Duy.</li>
         <li>Date of Birth: 27/10/1999.</li>
         <li>Ages: 20 years old.</li>
