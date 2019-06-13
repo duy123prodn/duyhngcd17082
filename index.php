@@ -4,7 +4,7 @@
   <style type="text/css">
       body{
         background-image: url('../images/background.JPG');
-        background-repeat: repeat center center;
+        background-repeat: center;
   </style>
   <?php echo '<h1 style="color: red; text-align: center">Hello <3 Welcome to my Website</h1>'
   ?>
