@@ -1,6 +1,10 @@
 <html>
  <head>
   <title>Duy's Simple Website</title>
+  <style type="text/css">
+      body{
+        background: url('../images/background.JPG');
+  </style>
   <?php echo '<h1 style="color: red; text-align: center">Hello <3 Welcome to my Website</h1>'
   ?>
   <?php echo '<h2 style="color: blue; text-align: center">Thank you for coming here ! </h2>'
@@ -10,7 +14,7 @@
   
  </head>
  
- <body background="../images/background.jpg">
+ <body>
     <h2><span>S</span>ome Informations about me:</h2>
     <div class=SumBOX>
         <div class=pictute style="width: 240px; margin-left: 50px; height: 300px; border-color: black; border: dashed; ">
