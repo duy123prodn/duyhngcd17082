@@ -7,34 +7,22 @@
   ?>
  </head>
  <body>
-    <div class=title style="border: black; width: 350px; height: 170px; background: pink; margin-top: 100px; margin-left: 900px ">
+    <div class=title style="padding-top: 10px; border: dashed; border-color: black; width: 350px; height: 170px; background: pink; margin-top: 100px; margin-left: 900px ">
         <ul>
             <li>
-                <span style="color: white"> <a href="https://www.facebook.com/duy123prodn" target="_blank" >Link to my facebook</a> </span>
+                <span style="color: white"> <a href="https://www.facebook.com/duy123prodn" target="_blank" >LINK TO MY FACEBOOK</a> </span>
             </li>
 
             <li>
-                <a href="https://vnexpress.net/" target="_blank" >Đọc báo trên VnExpress Thì Nhấn Vào Đây</a>
+                <a href="https://vnexpress.net/" target="_blank" >VNEXPRESS</a>
             </li>   
-
-                <a href="https://www.24h.com.vn/" target="_blank" >Đọc báo ở trang 24h thì nhấn vào đây</a>
-
             <li>
-                <a href="ConnectToDB.php" target="_blank" >Connect to Database: CLICK HERE</a> 
-            </li>
-            <li>
-                <a href="InsertData.php" target="_blank" >Provide me your Information. Thank you <3 </a>
-            </li> 
-            <li>
-                <a href="UpdateData.php" target="_blank" >Update Data</a>
-            </li>
-            <li>
-                <a href="DeleteData.php" target="_blank" >Delete Data</a> 
+                <a href="https://www.24h.com.vn/" target="_blank" >24h.com.vn</a>
             </li>
         </ul>
     </div >
 <div class=picture>
-    <img src="duy.jpg">
+    <img src="../images/duy.jpg" style="margin-top: 100px; margin-left: 20px;">
 </div>
  </body>
 </html>
