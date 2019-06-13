@@ -1,12 +1,18 @@
 <html>
  <head>
   <title>Duy's Simple Website</title>
+  <?php echo "<h1>Hello <3 Welcome to my Website</h1>"
+  ?>
+  <?php echo "<h2>Thank you for coming here ! </h2>"
+  ?>
  </head>
  <body>
-    <div class=title style="width: 350px; height: 50px; background: blue; margin-top: 30px; margin-left: 150px ">
-                <p>
-                    HELLO !!! WELCOME TO MY WEBSITE    
-                </p>
+    <div class=title style="width: 350px; height: 50px; background: black; margin-top: 100px; margin-left: 150px ">
+        <ul>
+            <li>
+                <span style="color: white"> <a href="www.facebook.com/duy123prodn" target="_blank" >Link to my facebook</a> </span>
+            </li>
+        </ul>
     </div >
     <div class=class=introduction>
         
