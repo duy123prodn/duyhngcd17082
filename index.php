@@ -20,16 +20,22 @@
  <body>
     <h2><span>S</span>ome Informations about me:</h2>
     <div id="content" class="container" style="width: 960px; border: 1px solid #333; padding: 10px;">
-        <div class="pictute" style="width: 240px; margin-right: 700px; height: 300px; border-color: black; border: dashed; ">
-            <img src="../images/duy.jpg" style="width: 240px; height: 300px; float: left;"> 
+
+        <div id="pictute" style="width: 240px; height: 300px; border-color: black; border: dashed; float:left;">
+
+            <img src="../images/duy.jpg" style="width: 240px; height: 300px;"> 
+
         </div>
-        <div class="infor" style="margin-left: 50px; float: right;">
+
+        <div id="infor" style="margin-left: 50px; width: 240px; height: 300px; float: right; padding: 1px;">
+            <div style="padding: 1px;">
             <p>Full Name: Ho Nhat Duy. </p>
             <p>Date of Birth: 27/10/1999. </p>
             <p>Ages: 20 years old. </p>
             <p>Hometown: Da Nang City </p>
             <p>Height: 173cm </p>
             <p>Weight: 62kg </p>
+            </div>
         </div>
         <dir class="clear" style=" clear: both;"></dir>
     </div>
