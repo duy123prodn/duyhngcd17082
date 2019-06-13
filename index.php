@@ -5,7 +5,7 @@
       body{
         background-image: url('../images/background3.jpg');
         background-repeat: no-repeat;
-        background-size: auto center center;
+        background-size: cover;
 
   </style>
   <?php echo '<h1 style="color: red; text-align: center">Hello <3 Welcome to my Website</h1>'
