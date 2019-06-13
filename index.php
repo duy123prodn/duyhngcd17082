@@ -7,7 +7,7 @@
   ?>
  </head>
  <body>
-    <div class=box123 style="width: 1300px; background: blue;">
+    <div class=box123 style="width: 1300px; background: blue; height: 300px; text-align: center;">
         <div class=box1 style="width: 350px; margin-left: 1px; margin-top: 1px; height: 200px; background: red;">
             <ul>
             <li>    
