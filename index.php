@@ -17,18 +17,18 @@
     <div class=class=introduction>
         
     </div>
-
-     <a href="https://vnexpress.net/" target="_blank" >Link to vnexpress</a>
+<div class=clickdata>
+     <a href="https://vnexpress.net/" target="_blank" >Đọc báo trên VnExpress Thì Nhấn Vào Đây</a>
      <br/>
-     <a href="https://www.24h.com.vn/" target="_blank" >Link to 24h</a>
+     <a href="https://www.24h.com.vn/" target="_blank" >Đọc báo ở trang 24h thì nhấn vào đây</a>
      <br/>
-     <a href="ConnectToDB.php" target="_blank" >Connect database</a>
+     <a href="ConnectToDB.php" target="_blank" >Connect to Database: CLICK HERE</a>
      <br/>
-     <a href="InsertData.php" target="_blank" >Insert data to the database</a>
+     <a href="InsertData.php" target="_blank" >Provide me your Information. Thank you <3 </a>
      <br/>
-     <a href="UpdateData.php" target="_blank" >Update data to the database</a> 
+     <a href="UpdateData.php" target="_blank" >Update Data</a> 
      <br/>
-     <a href="DeleteData.php" target="_blank" >Delete data to the database</a> 
-
+     <a href="DeleteData.php" target="_blank" >Delete Data</a> 
+</div>
  </body>
 </html>
