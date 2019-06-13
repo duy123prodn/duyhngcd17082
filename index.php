@@ -7,7 +7,7 @@
   ?>
  </head>
  <body>
-    <div class=title style="width: 280px; height: 50px; background: pink; margin-top: 100px; margin-left: 150px ">
+    <div class=title style="width: 280px; height: 25px; background: pink; margin-top: 100px; margin-left: 50px ">
         <ul>
             <li>
                 <span style="color: white"> <a href="https://www.facebook.com/duy123prodn" target="_blank" >Link to my facebook</a> </span>
