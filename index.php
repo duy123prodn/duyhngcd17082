@@ -27,7 +27,7 @@
 
         </div>
 
-        <div id="infor" style="margin-left: 50px; width: 240px; height: 300px; float: right; padding: 1px;">
+        <div id="infor" style="margin-left: 50px; width: 240px; height: 300px; float: right; padding: 1px; margin-right: 260px;">
             <div style="padding: 1px;">
             <p>Full Name: Ho Nhat Duy. </p>
             <p>Date of Birth: 27/10/1999. </p>
@@ -35,6 +35,7 @@
             <p>Hometown: Da Nang City </p>
             <p>Height: 173cm </p>
             <p>Weight: 62kg </p>
+            <p>Hobbies: Hanging out, plaing games, sleeping, traveling..</p>
             </div>
         </div>
         <dir class="clear" style=" clear: both;"></dir>
