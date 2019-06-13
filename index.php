@@ -17,7 +17,7 @@
     .clickdata {
         float: left;
         margin-left: 20px;
-        margin-top: -130px;
+        margin-top: 200px;
      }
     .clickdata input[type="submit"] {
         font-size: 0.9em;
@@ -34,7 +34,7 @@
     }
     </style>
  <body>
-    <div class=title style="width: 280px; height: 25px; background: pink; margin-top: 100px; margin-left: 50px ">
+    <div class=title style="width: 280px; height: 25px; background: pink; margin-top: 100px; margin-left: 500px ">
         <ul>
             <li>
                 <span style="color: white"> <a href="https://www.facebook.com/duy123prodn" target="_blank" >Link to my facebook</a> </span>
@@ -59,7 +59,7 @@
      <p>===============================================</p>
      <a href="UpdateData.php" target="_blank" >Update Data</a>
      <br/>
-     <p>================================================</p>
+     <p>===============================================</p>
      <a href="DeleteData.php" target="_blank" >Delete Data</a> 
 </div>
  </body>
