@@ -19,7 +19,7 @@
  
  <body>
     <h2><span>S</span>ome Informations about me:</h2>
-    <div id="content" class="container" style="width: 510px; border: 1px solid #333; padding: 10px;">
+    <div id="content" class="container" style="width: 550px; border: 1px solid #333; padding: 10px;">
 
         <div id="pictute" style="width: 240px; height: 300px; border-color: black; border: dashed; float:left;">
 
