@@ -1,18 +1,14 @@
 <html>
  <head>
   <title>Duy's Simple Website</title>
-  
  </head>
-
  <body>
-    <div class=title>
-        <ul>
-            <li>
-                <p><span>H<span/>ello !!! WELCOME TO MY WEBSITE<p>
-            </li>
-        </ul>
-    </div class=>
-    <div>
+    <div class=title style="background: red; margin-top: 20px; margin-left: 100px">
+                <p>
+                    Hello !!! WELCOME TO MY WEBSITE    
+                </p>
+    </div >
+    <div class=class=introduction>
         
     </div>
 
