@@ -10,16 +10,18 @@
  </head>
  <body>
     <h2><span>S</span>ome Informations about me:</h2>
-    <ul>
-        <p>Full Name: Ho Nhat Duy. </p>
-        <p>Date of Birth: 27/10/1999. </p>
-        <p>Ages: 20 years old. </p>
-        <p>Hometown: Da Nang City </p>
-        <p>Height: 173cm </p>
-        <p>Weight: 62kg </p>
-        <div calss=pictute style="width: 100px; margin-left: 700px; height: 100px; background: black;  ">
-            
+    <div class=SumBOX>
+        <div calss=pictute style="width: 250px; margin-left: 50px; height: 500px; border-color: black; border: dashed; ">
+            <img src="images/duy.jpg">
         </div>
-    </ul>
+        <div>
+            <p>Full Name: Ho Nhat Duy. </p>
+            <p>Date of Birth: 27/10/1999. </p>
+            <p>Ages: 20 years old. </p>
+            <p>Hometown: Da Nang City </p>
+            <p>Height: 173cm </p>
+            <p>Weight: 62kg </p>
+        </div>
+    </div>
  </body>
 </html>
