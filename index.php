@@ -3,7 +3,7 @@
   <title>Duy's Simple Website</title>
   <style type="text/css">
       body{
-        background-image: url('../images/background3.jpg');
+        background-image: url('../images/background.jpg');
         background-repeat: no-repeat;
         background-size: cover;
 
