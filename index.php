@@ -9,12 +9,14 @@
   ?>
  </head>
  <body>
+    <h2><span>S</span>ome Informations about me:</h2>
     <ul>
-        <li><span>S</spam>OME MY INFORMATIONS</li></br>
-        <li>Full Name: Ho Nhat Duy.</li>
-        <li>Date of Birth: 27/10/1999.</li>
-        <li>Ages: 20 years old.</li>
-        <li>Hometown: Da Nang City</li>
+        <p>Full Name: Ho Nhat Duy. </p>
+        <p>Date of Birth: 27/10/1999. </p>
+        <p>Ages: 20 years old. </p>
+        <p>Hometown: Da Nang City </p>
+        <p>Height: 173cm </p>
+        <p>Weight: 62kg </p>
     </ul>
  </body>
 </html>
