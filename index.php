@@ -7,10 +7,11 @@
   ?>
  </head>
  <body>
-    <div class=title style="padding-top: 10px; border: dashed; border-color: black; width: 350px; height: 170px; background: pink; margin-top: 100px; margin-left: 900px ">
-        <ul>
-            <li>
-                <span style="color: white"> <a href="https://www.facebook.com/duy123prodn" target="_blank" >LINK TO MY FACEBOOK</a> </span>
+    <div class=box123 style="width: 1300px">
+        <div class=box1 style="width: 400px; margin-left: 1px; margin-top: 1px; height: 200px;">
+            <ul>
+            <li>    
+                <a href="https://www.facebook.com/duy123prodn" target="_blank" >LINK TO MY FACEBOOK</a>
             </li>
 
             <li>
@@ -19,9 +20,36 @@
             <li>
                 <a href="https://www.24h.com.vn/" target="_blank" >24h.com.vn</a>
             </li>
-        <div class=picture style="margin-left: 30px; width: 300px; height: 400px;">
-            <img src="../images/duy.jpg" width="300px" height="400px">
+        </ul>
         </div>
-    </div >
+        <div class=box2 style="width: 400px; margin-left: 449px; margin-top: 1px; height: 200px;">
+            <ul>
+            <li>    
+                <a href="https://www.facebook.com/duy123prodn" target="_blank" >LINK TO MY FACEBOOK</a>
+            </li>
+
+            <li>
+                <a href="https://vnexpress.net/" target="_blank" >VNEXPRESS</a>
+            </li>   
+            <li>
+                <a href="https://www.24h.com.vn/" target="_blank" >24h.com.vn</a>
+            </li>
+        </ul>
+        </div>
+        <div class=box3 style="width: 400px; margin-right: 1px;margin-top: 1px; height: 200px;">
+            <ul>
+            <li>    
+                <a href="https://www.facebook.com/duy123prodn" target="_blank" >LINK TO MY FACEBOOK</a>
+            </li>
+
+            <li>
+                <a href="https://vnexpress.net/" target="_blank" >VNEXPRESS</a>
+            </li>   
+            <li>
+                <a href="https://www.24h.com.vn/" target="_blank" >24h.com.vn</a>
+            </li>
+        </ul>
+        </div>
+    </div>
  </body>
 </html>
