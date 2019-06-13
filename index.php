@@ -3,8 +3,8 @@
   <title>Duy's Simple Website</title>
   <style type="text/css">
       body{
-        background: url('../images/background.JPG');
-        background-repeat: repeat;
+        background-image: url('../images/background.JPG');
+        background-repeat: repeat center center;
   </style>
   <?php echo '<h1 style="color: red; text-align: center">Hello <3 Welcome to my Website</h1>'
   ?>
