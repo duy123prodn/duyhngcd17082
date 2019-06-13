@@ -22,7 +22,7 @@
         </ul>
     </div >
 <div class=picture>
-    <img src="../images/duy.jpg" style="margin-top: 100px; margin-left: 20px;">
+    <img src="../images/duy.jpg" width="200px" height="400px">
 </div>
  </body>
 </html>
