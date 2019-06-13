@@ -17,6 +17,9 @@
         <p>Hometown: Da Nang City </p>
         <p>Height: 173cm </p>
         <p>Weight: 62kg </p>
+        <div calss=pictute style="width: 100px; margin-left: 700px; height: 100px; background: black;  ">
+            
+        </div>
     </ul>
  </body>
 </html>
