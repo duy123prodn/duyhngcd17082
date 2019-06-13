@@ -8,7 +8,7 @@
         background-size: cover;
 
   </style>
-  <?php echo '<h1 style="color: red; text-align: center">Hello <3 Welcome to my Website</h1>'
+  <?php echo '<h1 style="color: white; text-align: center">Hello <3 Welcome to my Website</h1>'
   ?>
   <?php echo '<h2 style="color: blue; text-align: center">Thank you for coming here ! </h2>'
   ?>
@@ -19,11 +19,11 @@
  
  <body>
     <h2><span>S</span>ome Informations about me:</h2>
-    <div class=SumBOX>
+    <div id="content" class="container">
         <div class=pictute style="width: 240px; margin-left: 50px; height: 300px; border-color: black; border: dashed; ">
-            <img src="../images/duy.jpg" style="width: 240px; height: 300px">
+            <img src="../images/duy.jpg" style="width: 240px; height: 300px; float: left;"> 
         </div>
-        <div class=infor style="margin-left: 50px;">
+        <div class=infor style="margin-left: 50px; float: right;">
             <p>Full Name: Ho Nhat Duy. </p>
             <p>Date of Birth: 27/10/1999. </p>
             <p>Ages: 20 years old. </p>
