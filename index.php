@@ -3,9 +3,9 @@
   <title>Duy's Simple Website</title>
  </head>
  <body>
-    <div class=title style="background: red; margin-top: 20px; margin-left: 100px">
+    <div class=title style="width: 350px; height: 50px; background: blue; margin-top: 30px; margin-left: 150px ">
                 <p>
-                    Hello !!! WELCOME TO MY WEBSITE    
+                    HELLO !!! WELCOME TO MY WEBSITE    
                 </p>
     </div >
     <div class=class=introduction>
