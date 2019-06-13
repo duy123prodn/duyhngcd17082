@@ -27,7 +27,7 @@
 
         </div>
 
-        <div id="infor" style="margin-left: 50px; width: 240px; height: 300px; float: right; padding: 1px; margin-right: 360px;">
+        <div id="infor" style="margin-left: 50px; width: 240px; height: 300px; float: right; padding: 1px; margin-right: 60px;">
             <div style="padding: 1px;">
             <p>Full Name: Ho Nhat Duy. </p>
             <p>Date of Birth: 27/10/1999. </p>
