@@ -1,7 +1,7 @@
 <html>
  <head>
   <title>Duy's Simple Website</title>
-  <?php echo "<h1>Hello <3 Welcome to my Website</h1>"
+  <?php echo '<h1 style="color: red; text-align: center">Hello <3 Welcome to my Website</h1>'
   ?>
   <?php echo "<h2>Thank you for coming here ! </h2>"
   ?>
