@@ -10,11 +10,11 @@
   
  </head>
  
- <body>
+ <body background="../images/background.jpg">
     <h2><span>S</span>ome Informations about me:</h2>
     <div class=SumBOX>
-        <div class=pictute style="width: 250px; margin-left: 50px; height: 300px; border-color: black; border: dashed; ">
-            <img src="../images/duy.jpg" style="width: 250px; margin-left: 50px; height: 300px">
+        <div class=pictute style="width: 240px; margin-left: 50px; height: 300px; border-color: black; border: dashed; ">
+            <img src="../images/duy.jpg" style="width: 240px; height: 300px">
         </div>
         <div class=infor style="margin-left: 50px;">
             <p>Full Name: Ho Nhat Duy. </p>
