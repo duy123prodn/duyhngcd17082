@@ -19,7 +19,7 @@
  
  <body>
     <h2><span>S</span>ome Informations about me:</h2>
-    <div id="content" class="container" style="width: 760px; border: 1px solid #333; padding: 10px;">
+    <div id="content" class="container" style="width: 485px; border: 1px solid #333; padding: 10px;">
 
         <div id="pictute" style="width: 240px; height: 300px; border-color: black; border: dashed; float:left;">
 
@@ -27,7 +27,7 @@
 
         </div>
 
-        <div id="infor" style="margin-left: 50px; width: 240px; height: 300px; float: right; padding: 1px; margin-right: 60px;">
+        <div id="infor" style="margin-left: 50px; width: 240px; height: 300px; float: right; padding: 1px; margin-right: 10px;">
             <div style="padding: 1px;">
             <p>Full Name: Ho Nhat Duy. </p>
             <p>Date of Birth: 27/10/1999. </p>
