@@ -10,7 +10,7 @@
   </style>
   <?php echo '<h1 style="color: white; text-align: center">Hello <3 Welcome to my Website</h1>'
   ?>
-  <?php echo '<h2 style="color: blue; text-align: center">Thank you for coming here ! </h2>'
+  <?php echo '<h2 style="color: white; text-align: center">Thank you for coming here ! </h2>'
   ?>
   <?php echo '<h3 style="color: green; text-align: center"> <a href="https://www.facebook.com/duy123prodn" target="_blank"> ==> LINK TO MY FACEBOOK <== </a></h3>'
   ?>
@@ -43,6 +43,13 @@
 
         </div>
         <div id="data" style="width: 240px; height: 300px; border: 1px solid #333 ; padding: 5px ; float: right;">
+            <a href="https://www.facebook.com/duy123prodn" target="_blank">A</a>
+            <a href="https://www.facebook.com/duy123prodn" target="_blank">B</a>
+            <a href="https://www.facebook.com/duy123prodn" target="_blank">C</a>
+            <a href="https://www.facebook.com/duy123prodn" target="_blank">D</a>
+            <a href="https://www.facebook.com/duy123prodn" target="_blank">E</a>
+
+
         </div>
         <dir class="clear0" style=" clear: both;"></dir>
     </div>
