@@ -20,7 +20,7 @@
  <body>
     <h2><span>S</span>ome Informations about me:</h2>
     <div id="content0" class="container0" style="width: 900px; border: 1px solid #333; padding: 10px;">
-                <div id="content" class="container" style="width: 550px; border: 1px solid #333; padding: 10px;">
+        <div id="content" class="container" style="width: 550px; border: 1px solid #333; padding: 10px;">
             
                     <div id="pictute" style="width: 240px; height: 300px; border-color: black; border: dashed; float:left;">
 
@@ -38,13 +38,13 @@
                         <p>Weight: 62kg </p>
                         <p>Hobbies: Hanging out, playing games, sleeping, traveling..</p>
                     </div>
-                </div>
+                    </div>
                 <dir class="clear" style=" clear: both;"></dir>
 
-            </div>
-            <div id="data" style="width: 240px; height: 300px; border-color: black; border: solid #333 ; float:left;">
-            </div>
-         <dir class="clear" style=" clear: both;"></dir>
+        </div>
+        <div id="data" style="width: 240px; height: 300px; border: 1px solid #333 ; padding: 5px ; float: left;">
+        </div>
+        <dir class="clear0" style=" clear: both;"></dir>
     </div>
             
  </body>
