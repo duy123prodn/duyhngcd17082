@@ -19,8 +19,8 @@
  
  <body>
     <h2><span>S</span>ome Informations about me:</h2>
-    <div id="content0" class="container0" style="width: 850px; border: 1px solid #333; padding: 10px;">
-        <div id="content" class="container" style="width: 550px; border: 1px solid #333; padding: 10px; float: left;">
+    <div id="content0" class="container0" style="width: 850px; padding: 10px;">
+        <div id="content" class="container" style="width: 550px; padding: 10px; float: left;">
             
                     <div id="pictute" style="width: 240px; height: 300px; border-color: black; border: dashed; float:left;">
 
@@ -42,15 +42,14 @@
                 <dir class="clear" style=" clear: both;"></dir>
 
         </div>
-        <div id="data" style="width: 240px; height: 300px; border: 1px solid #333 ; padding: 10px ; float: right;">
-            <ul>
-            <p><a href="" target="_blank">Connect to Database Function:</a></p>
+        <div id="data" style="width: 240px; height: 300px; padding: 11px ; float: right;">
+            <ul  style="padding: 1px;">
+            <p>Connect to Database Function:</p>
             <p><a href="InsertData.php" target="_blank">Give me Your Informations. Thank you ! </a></p>
             <p><a href="ConnectToDB.php" target="_blank">Connect to Database</a></p>
             <p><a href="UpdateData.php" target="_blank">Update Data</a></p>
             <p><a href="DeleteData.php" target="_blank">Delete Data</a></p>
             </ul>
-
         </div>
         <dir class="clear0" style=" clear: both;"></dir>
     </div>
