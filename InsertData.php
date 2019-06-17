@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -73,5 +73,3 @@ $stmt = $pdo->prepare($sql);
 ?>
 </body>
 </html>
-=======
-
