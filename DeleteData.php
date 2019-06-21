@@ -1,15 +1,30 @@
 
 <!DOCTYPE html>
 <html>
+<head>
+<title>Delete data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+li {
+list-style: none;
+}
+</style>
+</head>
+
+
 <body>
 
+
 <h1>DELETE DATA TO DATABASE</h1>
+<h2>Delete data from student table</h2>
 <ul>
-    <form name="DeleteData" action="Deleteata.php" method="POST" >
+    <form name="DeleteData" action="Deletedata.php" method="POST" >
 <li>Enter Student ID:</li><li><input type="text" name="stuid" /></li>
 <li><input type="submit" />Delete This Data by ID</li>
 </form>
 </ul>
+
+
 <?php
 ini_set('display_errors', 1	);
 echo "Delete database!";
@@ -32,13 +47,18 @@ if (empty(getenv("DATABASE_URL"))){
         $db["pass"],
         ltrim($db["path"], "/")
    ));
-}  
+} 
+
+if($pdo === false){
+     echo "ERROR: Could not connect Database";
+}
 
 $sql = "DELETE FROM student WHERE stuid = '$_POST[stuid]'";
 
 $stmt = $pdo->prepare($sql);
 
 if($stmt->execute() == TRUE){
+
         echo "Record Deleted successfully.";
     } else {
         echo "Error Deleting record: ";
