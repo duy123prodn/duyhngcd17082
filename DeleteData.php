@@ -52,7 +52,7 @@ $sql = "DELETE FROM student WHERE stuid = '<?php echo VALUES('$_POST[StudenTID]?
 $stmt = $pdo->prepare($sql);
  {
 //$stmt->execute();
- if (is_null($_POST[StudentID])) {
+ if (is_null($_POST[StudenTID])) {
    echo "StudentID must be not null";
  }
  else
