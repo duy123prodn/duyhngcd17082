@@ -54,7 +54,7 @@ if($pdo === false){
      echo "ERROR: Could not connect Database";
 }
 
-$sql = "DELETE FROM student WHERE stuid = '<?php echo %VALUES('$_POST[StudentID]')?> ' ";
+$sql = "DELETE FROM student WHERE stuid = '('$_POST[StudentID]')' ";
 
 $stmt = $pdo->prepare($sql);
  {
@@ -63,7 +63,7 @@ $stmt = $pdo->prepare($sql);
    echo "StudentID must be not null";
  }
  else
-    if($stmt->execute($sql) == TRUE){
+    if($stmt->execute() == TRUE){
         echo "Record inserted successfully.";
     } else {
         echo "Error inserting record: ";
