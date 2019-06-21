@@ -38,13 +38,14 @@ $stmt->execute();
 $resultSet = $stmt->fetchAll();
 echo '<p>Students information:</p>';
 foreach ($resultSet as $row) {
-	echo $row['stuid'];
+	   echo $row['stuid'];
         echo "    ";
-        echo $row['fname'];
+        echo $row['fname']; 
         echo "    ";
         echo $row['email'];
         echo "    ";
         echo $row['classname'];
+        echo '<a href='DeleteData.php?del=$row['stuid']'>Delete</a>';
         echo "<br/>";
 }
 
