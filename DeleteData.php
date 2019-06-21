@@ -17,7 +17,7 @@ list-style: none;
 <h2>Delete data from student table</h2>
 <ul>
     <form name="DeleteData" action="DeleteData.php" method="POST" >
-<li>Enter Student ID you want to delete:</li><li><input type="text" name="student_id" /></li>
+<li>Enter Student ID you want to delete:</li><li><input type="text" name="studentid" /></li>
 <li><input type="submit" /></li>
 </form>
 </ul>
@@ -50,8 +50,7 @@ if($pdo === false){
 }
 
 
-$sql = "DELETE FROM student(stuid)" . " VALUE(' $_POST[student_id] ') ";
-
+$sql = "DELETE FROM student WHERE stuid = '<php echo $row['stuid']?>'";
 $stmt = $pdo->prepare($sql);
 {
 //$stmt->execute();
