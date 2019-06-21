@@ -1,4 +1,6 @@
-
+<?php 
+	include 'ConnectToDB.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,7 +17,7 @@ list-style: none;
 <h2>Delete data from student table</h2>
 <ul>
     <form name="DeleteData" action="DeleteData.php" method="POST" >
-<li>Enter Student ID you want to delete:</li><li><input type="text" name="StudentID" /></li>
+<li>Enter Student ID you want to delete:</li><li><input type="text" name="student_id" /></li>
 <li><input type="submit" /></li>
 </form>
 </ul>
@@ -47,19 +49,13 @@ if($pdo === false){
      echo "ERROR: Could not connect Database";
 }
 
-$tbl="student"; 
 
-$stuid = $_GET ['stuid'];
+$sql = "DELETE FROM student(stuid)" . " VALUE(' $_POST[student_id] ') ";
 
-$sql = "DELETE FROM student WHERE stuid = '$stuid' ";
-$result = mysql_query($sql, $connect);
 $stmt = $pdo->prepare($sql);
- {
+{
 //$stmt->execute();
- if (is_null($_POST[StudentID])) {
-   echo "StudentID must be not null";
- }
- else
+ 
     if($stmt->execute() == TRUE){
         echo "Record Deleted successfully.";
     } else {
