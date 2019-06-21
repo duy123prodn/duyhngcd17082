@@ -45,7 +45,7 @@ foreach ($resultSet as $row) {
         echo $row['email'];
         echo "    ";
         echo $row['classname'];
-        echo '<li><a href="DeleteData.php?del=$row[stuid]">Delete Data</a></li>';
+        echo '<li><a href="DeleteData1.php?del=$row[stuid]">Delete Data</a></li>';
         echo "<br/>";
 }
 
