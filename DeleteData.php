@@ -6,7 +6,7 @@
 <h1>DELETE DATA TO DATABASE</h1>
 <ul>
     <form name="DeleteData" action="Deleteata.php" method="POST" >
-<li>Enter Student ID:</li><li><input type="text" name="stuid" /></li>
+<li>Enter Student ID:</li><li><input type="text" name="StudentID" /></li>
 <li><input type="submit" />Delete This Data by ID</li>
 </form>
 </ul>
@@ -34,15 +34,23 @@ if (empty(getenv("DATABASE_URL"))){
    ));
 }  
 
-$sql = "DELETE FROM student WHERE stuid = '$_POST[stuid]'";
+$sql = "DELETE FROM student WHERE stuid = '$_POST[StudentID]'";
+
 $stmt = $pdo->prepare($sql);
 
-if($stmt->execute() == TRUE){
-    echo "Record deleted successfully.";
-} else {
-    echo "Error deleting record: ";
-}
-
+ if (is_null($_POST[StudentID])) {
+   echo "StudentID must be not null";
+ }
+ else
+    if($stmt->execute() == TRUE)
+    {
+        echo "Record Deleted successfully.";
+    } 
+    else 
+    {
+        echo "Error Deleting record: ";
+    }
+ }
 ?>
 </body>
 </html>
