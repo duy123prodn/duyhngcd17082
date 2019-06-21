@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -54,8 +47,12 @@ if($pdo === false){
      echo "ERROR: Could not connect Database";
 }
 
-$sql = "DELETE FROM student WHERE stuid = '('$_POST[StudentID]')' ";
+$tbl="student"; 
 
+$stuid = $_GET ['stuid'];
+
+$sql = "DELETE FROM student WHERE stuid = '$stuid' ";
+$result = mysql_query($sql, $connect);
 $stmt = $pdo->prepare($sql);
  {
 //$stmt->execute();
@@ -64,9 +61,9 @@ $stmt = $pdo->prepare($sql);
  }
  else
     if($stmt->execute() == TRUE){
-        echo "Record inserted successfully.";
+        echo "Record Deleted successfully.";
     } else {
-        echo "Error inserting record: ";
+        echo "Error Deleting record.";
     }
  }
 ?>
