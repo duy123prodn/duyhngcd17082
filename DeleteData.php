@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +22,7 @@ list-style: none;
 <h2>Delete data from student table</h2>
 <ul>
     <form name="DeleteData" action="DeleteData.php" method="POST" >
-<li>Enter Student ID you want to delete:</li><li><input type="text" name="StudenTID" /></li>
+<li>Enter Student ID you want to delete:</li><li><input type="text" name="Delstuid" /></li>
 <li><input type="submit" /></li>
 </form>
 </ul>
@@ -47,12 +55,12 @@ if($pdo === false){
      echo "ERROR: Could not connect Database";
 }
 
-$sql = "DELETE FROM student WHERE stuid = ' <?php echo VALUES('$_POST[StudenTID]')?> '";
+$sql = "DELETE FROM student WHERE stuid = '<?php echo VALUES('$_POST[Delstuid]')?> '";
 
 $stmt = $pdo->prepare($sql);
  {
 //$stmt->execute();
- if (is_null($_POST[StudenTID])) {
+ if (is_null($_POST[Delstuid])) {
    echo "StudentID must be not null";
  }
  else
