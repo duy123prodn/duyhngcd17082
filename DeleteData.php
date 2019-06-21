@@ -47,7 +47,7 @@ if($pdo === false){
      echo "ERROR: Could not connect Database";
 }
 
-$sql = "DELETE FROM student WHERE stuid = '<?php echo VALUES('$_POST[StudenTID]?>";
+$sql = "DELETE FROM student WHERE stuid = ' <?php echo VALUES('$_POST[StudenTID]')?> '";
 
 $stmt = $pdo->prepare($sql);
  {
