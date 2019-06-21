@@ -17,7 +17,7 @@ if (empty(getenv("DATABASE_URL"))){
 if (isset($_GET['del']))
 {
 	$stuid = $_GET['del'];
-	$sql = "DELETE FROM student WHERE stuid = '$GET_['stuid']'";
+	$sql = "DELETE FROM student WHERE stuid = '<php echo $row['stuid']?>'";
 	$stmt = $pdo->prepare($sql);
 	if($stmt->execute() == TRUE)
 	{
