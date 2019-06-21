@@ -14,16 +14,19 @@ if (empty(getenv("DATABASE_URL"))){
         ltrim($db["path"], "/")
    ));
 } 
-
-if(isset($_GET['del'])){
+if (isset($_GET['del']))
+{
 	$stuid = $_GET['del'];
-	$sql = "DELETE FROM student WHERE stuid = '$id'";
-    $stmt = $pdo->prepare($sql);
-    if($stmt->execute() == TRUE){
-    echo "Record deleted successfully.";
-} else {
-    echo "Error deleting record. ";
-}
-?>
+	$sql = "DELETE FROM student WHERE stuid = '$GET_['stuid']'";
+	$stmt = $pdo->prepare($sql);
+	if($stmt->execute() == TRUE)
+	{
+    	echo "Record deleted successfully.";
+		else 
+		{
+    		echo "Error deleting record. ";
+		}
+	}
+
 }
 ?>

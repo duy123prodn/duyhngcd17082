@@ -1,6 +1,15 @@
 
 <!DOCTYPE html>
 <html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+li {
+list-style: none;
+}
+</style>
+</head>
 <body>
 
 <h1>DATABASE CONNECTION</h1>
@@ -45,7 +54,7 @@ foreach ($resultSet as $row) {
         echo $row['email'];
         echo "    ";
         echo $row['classname'];
-        echo '<li><a href="DeleteData1.php?del=$row[stuid]">Delete Data</a></li>';
+        echo '<li><a href="DeleteData1.php?del=$row[stuid]">Delete</a></li>';
         echo "<br/>";
 }
 
