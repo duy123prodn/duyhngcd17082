@@ -22,14 +22,13 @@ list-style: none;
 <h2>Delete data from student table</h2>
 <ul>
     <form name="DeleteData" action="DeleteData.php" method="POST" >
-<li>Enter Student ID you want to delete:</li><li><input type="text" name="Delstuid" /></li>
+<li>Enter Student ID you want to delete:</li><li><input type="text" name="StudentID" /></li>
 <li><input type="submit" /></li>
 </form>
 </ul>
 
 <?php
 ini_set('display_errors', 1	);
-echo "Delete database!";
 ?>
 
 <?php
@@ -55,12 +54,12 @@ if($pdo === false){
      echo "ERROR: Could not connect Database";
 }
 
-$sql = "DELETE FROM student WHERE stuid = '<?php echo VALUES('$_POST[Delstuid]')?> '";
+$sql = "DELETE FROM student WHERE stuid = '<?php echo VALUES('$_POST[StudentID]')?> '";
 
 $stmt = $pdo->prepare($sql);
  {
 //$stmt->execute();
- if (is_null($_POST[Delstuid])) {
+ if (is_null($_POST[StudentID])) {
    echo "StudentID must be not null";
  }
  else
