@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-<title>Delete data</title>
+    <head>
+<title>Delete by using ID</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style>
 li {
@@ -10,20 +9,15 @@ list-style: none;
 }
 </style>
 </head>
-
-
 <body>
-
-
-<h1>DELETE DATA TO DATABASE</h1>
+<h1>DELETE DATA FROM DATABASE</h1>
 <h2>Delete data from student table</h2>
 <ul>
     <form name="DeleteData" action="DeleteData.php" method="POST" >
-<li>Enter Student ID:</li><li><input type="text" name="stuid" /></li>
-<li><input type="submit" />Delete This Data by ID</li>
+<li>Enter Student ID you want to delete:</li><li><input type="text" name="StudenTID" /></li>
+<li><input type="submit" /></li>
 </form>
 </ul>
-
 
 <?php
 ini_set('display_errors', 1	);
@@ -53,15 +47,19 @@ if($pdo === false){
      echo "ERROR: Could not connect Database";
 }
 
-$sql = "DELETE FROM student WHERE stuid = '$_POST[stuid]'";
+$sql = "DELETE FROM student WHERE stuid = '<?php echo VALUES('$_POST[StudenTID]?>";
 
 $stmt = $pdo->prepare($sql);
-
-if($stmt->execute() == TRUE){
-
-        echo "Record Deleted successfully.";
+ {
+//$stmt->execute();
+ if (is_null($_POST[StudentID])) {
+   echo "StudentID must be not null";
+ }
+ else
+    if($stmt->execute() == TRUE){
+        echo "Record inserted successfully.";
     } else {
-        echo "Error Deleting record: ";
+        echo "Error inserting record: ";
     }
  }
 ?>
