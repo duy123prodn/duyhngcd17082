@@ -18,7 +18,7 @@ list-style: none;
 <h1>DELETE DATA TO DATABASE</h1>
 <h2>Delete data from student table</h2>
 <ul>
-    <form name="DeleteData" action="Deletedata.php" method="POST" >
+    <form name="DeleteData" action="DeleteData.php" method="POST" >
 <li>Enter Student ID:</li><li><input type="text" name="stuid" /></li>
 <li><input type="submit" />Delete This Data by ID</li>
 </form>
