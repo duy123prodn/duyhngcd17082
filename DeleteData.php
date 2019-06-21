@@ -4,7 +4,12 @@
 <body>
 
 <h1>DELETE DATA TO DATABASE</h1>
-
+<ul>
+    <form name="DeleteData" action="Deleteata.php" method="POST" >
+<li>Enter Student ID:</li><li><input type="text" name="stuid" /></li>
+<li><input type="submit" />Delete This Data by ID</li>
+</form>
+</ul>
 <?php
 ini_set('display_errors', 1	);
 echo "Delete database!";
@@ -29,8 +34,9 @@ if (empty(getenv("DATABASE_URL"))){
    ));
 }  
 
-$sql = "DELETE FROM student WHERE stuid = 'ASD'";
+$sql = "DELETE FROM student WHERE stuid = '$_POST[stuid]'";
 $stmt = $pdo->prepare($sql);
+
 if($stmt->execute() == TRUE){
     echo "Record deleted successfully.";
 } else {
