@@ -25,7 +25,7 @@ if (empty(getenv("DATABASE_URL"))){
 <h1>DATABASE CONNECTION</h1>
 
 
-<?
+<?php
 
 $message = '';
 if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email']) && isset($_POST['classname']) ) 
@@ -61,7 +61,7 @@ if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email
       <?php endif; ?>
       <form method="post">
         <div class="form-group">
-          <label for="name">ID</label>
+          <label for="id">ID</label>
           <input type="text" name="StudentID" id="stuid" class="form-control">
         </div>
         <div class="form-group">
@@ -73,7 +73,7 @@ if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email
           <input type="email" name="email" id="email" class="form-control">
         </div>
         <div class="form-group">
-          <label for="name">Class</label>
+          <label for="class">Class</label>
           <input type="text" name="classname" id="classname" class="form-control">
         </div>
         <div class="form-group">

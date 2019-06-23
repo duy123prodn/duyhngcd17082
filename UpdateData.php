@@ -37,7 +37,7 @@ if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email
   $fname = $_POST['fname'];
   $email = $_POST['email'];
   $classname = $_POST['classname'];
-    $sql = 'UPDATE student SET stuid=:StudentID, name=:name, email=:email classname=:classname WHERE id=:StudenID';
+    $sql = 'UPDATE student SET stuid=:StudentID, fname=:fname, email=:email classname=:classname WHERE id=:StudenID';
   $stmt = $pdo->prepare($sql);
   if ($stmt->execute([':StudentID' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname]) )
   {
@@ -47,20 +47,10 @@ if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email
 ?>
 
 
-
-
-
-
-
-
-
-
-
-
 <div class="container">
   <div class="card mt-5">
     <div class="card-header">
-      <h2>Insert Information</h2>
+      <h2>Change Information</h2>
     </div>
     <div class="card-body">
       <?php if(!empty($message)): ?>
