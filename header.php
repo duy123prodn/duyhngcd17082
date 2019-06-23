@@ -38,6 +38,9 @@
       <li class="nav-item">
         <a class="nav-link" href="InsertData.php">Insert Data</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ConnectToDB.php">Insert Data</a>
+      </li>
       
       
     </ul>

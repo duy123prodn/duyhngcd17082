@@ -19,14 +19,14 @@ if (empty(getenv("DATABASE_URL"))){
 
 <?
 $message = '';
-if (isset($_POST['StudenID']) && isset($_POST['fname'])  && isset($_POST['email']) && isset($_POST['classname']) ) {
-  $stuid = $_POST['StudenID'];
-  $fname = $_POST['name'];
+if (isset($_POST['stuid']) && isset($_POST['fname'])  && isset($_POST['email']) && isset($_POST['classname']) ) {
+  $stuid = $_POST['stuid'];
+  $fname = $_POST['fname'];
   $email = $_POST['email'];
   $classname = $_POST['classname'];
-  $sql = 'INSERT INTO student(stuid, fname, email, classname) VALUES(:StudenID, :fname, :email, :classname)';
+  $sql = 'INSERT INTO student(stuid, fname, email, classname) VALUES(:stuid, :fname, :email, :classname)';
   $stmt = $pdo->prepare($sql);
-  if ($stmt->execute([':StudenID' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname])) {
+  if ($stmt->execute([':stuid' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname])) {
     $message = 'data inserted successfully';
   }
 }
@@ -47,7 +47,7 @@ if (isset($_POST['StudenID']) && isset($_POST['fname'])  && isset($_POST['email'
       <form method="post">
         <div class="form-group">
           <label for="name">ID</label>
-          <input type="text" name="StudenID" id="stuid" class="form-control">
+          <input type="text" name="stuid" id="stuid" class="form-control">
         </div>
         <div class="form-group">
           <label for="name">Name</label>
