@@ -26,7 +26,7 @@ if (empty(getenv("DATABASE_URL"))){
 s
 
 <?php 
-
+$message = '';
 
 $id = $_GET['stuid'];
 
@@ -50,6 +50,11 @@ if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email
   if ($stmt->execute([':StudentID' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname]) )
   {
     header("Location: ConnectToDB.php");
+    $message = 'OK  !!!';
+  else
+  {
+    $message = 'Data Updated Error.';
+  }
   }
 }
 
