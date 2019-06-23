@@ -17,15 +17,12 @@ if (empty(getenv("DATABASE_URL"))){
 
 
 }  
-$sql = 'SELECT * FROM people';
+$sql = 'SELECT * FROM student';
 $statement = $connection->prepare($sql);
 $statement->execute();
 $people = $statement->fetchAll(PDO::FETCH_OBJ);
 
 ?>
-
-
-<?php require 'header.php'; ?>
 <div class="container">
   <div class="card mt-5">
     <div class="card-header">
@@ -56,4 +53,3 @@ $people = $statement->fetchAll(PDO::FETCH_OBJ);
     </div>
   </div>
 </div>
-<?php require 'footer.php'; ?>
