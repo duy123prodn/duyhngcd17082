@@ -1,17 +1,4 @@
-
-<!DOCTYPE html>
-<html>
-<body>
-
-<h1>UPDATE DATA TO DATABASE</h1>
-
 <?php
-ini_set('display_errors', 1);
-echo "Update database!";
-?>
-
-<?php
-
 
 if (empty(getenv("DATABASE_URL"))){
     echo '<p>The DB does not exist</p>';
@@ -29,27 +16,79 @@ if (empty(getenv("DATABASE_URL"))){
    ));
 }  
 
-//$sql = 'UPDATE student '
-//                . 'SET name = :name, '
-//                . 'WHERE ID = :id';
-// 
-//      $stmt = $pdo->prepare($sql);
-//      //bind values to the statement
-//        $stmt->bindValue(':name', 'Lee');
-//        $stmt->bindValue(':id', 'SV02');
-        // update data in the database
-//        $stmt->execute();
-
-        // return the number of row affected
-        //return $stmt->rowCount();
-$sql = "UPDATE student SET fname = 'Lee Chan Do' WHERE stuid = 'SV02'";
-      $stmt = $pdo->prepare($sql);
-if($stmt->execute() == TRUE){
-    echo "Record updated successfully.";
-} else {
-    echo "Error updating record. ";
-}
-    
 ?>
-</body>
-</html>
+
+
+
+
+<?php require 'header.php'; ?>
+<h1>Updata Information</h1>
+
+
+<?php 
+  $id = $_GET['StudenID'];
+$sql = 'SELECT * FROM student WHERE id=:StudenID';
+$stmt = $pdo->prepare($sql);
+$stmt->execute([':StudenID' => $id ]);
+$person = $stmt->fetch(PDO::FETCH_OBJ);
+if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email']) && isset($_POST['classname']) )
+{
+  $stuid = $_POST['StudentID'];
+  $fname = $_POST['fname'];
+  $email = $_POST['email'];
+  $classname = $_POST['classname'];
+    $sql = 'UPDATE student SET stuid=:StudentID, name=:name, email=:email classname=:classname WHERE id=:StudenID';
+  $stmt = $pdo->prepare($sql);
+  if ($stmt->execute([':StudentID' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname]) )
+  {
+    header("Location: ConnectToDB.php");
+  }
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="card mt-5">
+    <div class="card-header">
+      <h2>Insert Information</h2>
+    </div>
+    <div class="card-body">
+      <?php if(!empty($message)): ?>
+        <div class="alert alert-success">
+          <?= $message; ?>
+        </div>
+      <?php endif; ?>
+      <form method="post">
+        <div class="form-group">
+          <label for="id">ID</label>
+          <input value="<?= $person->stuid; ?>" type="text" name="StudentID" id="stuid" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="fname">Full Name</label>
+          <input value="<?= $person->fname; ?>" type="text" name="fname" id="fname" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input value="<?= $person->email; ?>" type="email" name="email" id="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="class">Class</label>
+          <input value="<?= $person->classname; ?>" type="text" name="classname" id="classname" class="form-control">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-info">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
