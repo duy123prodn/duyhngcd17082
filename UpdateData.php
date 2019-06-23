@@ -27,11 +27,11 @@ s
 
 <?php 
 
-$stuid = $_GET['stuid'];
+$id = $_GET['stuid'];
 $sql = 'SELECT * FROM student WHERE stuid=:StudentID';
 
 $stmt = $pdo->prepare($sql);
-$stmt->execute([':StudentID' => $stuid ]);
+$stmt->execute([':StudentID' => $id ]);
 
 $person = $stmt->fetch(PDO::FETCH_OBJ);
 
@@ -65,8 +65,8 @@ if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email
       <?php endif; ?>
       <form method="post">
         <div class="form-group">
-          <label for="id">ID</label>
-          <input value="<?= $person->stuid; ?>" type="text" name="StudentID" id="stuid" class="form-control">
+          <label for="StudentID">ID</label>
+          <input type="text" value="<?= $person->stuid; ?>" name="StudentID" id="stuid" class="form-control">
         </div>
         <div class="form-group">
           <label for="fname">Full Name</label>
@@ -77,7 +77,7 @@ if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email
           <input value="<?= $person->email; ?>" type="email" name="email" id="email" class="form-control">
         </div>
         <div class="form-group">
-          <label for="class">Class</label>
+          <label for="classname">Class</label>
           <input value="<?= $person->classname; ?>" type="text" name="classname" id="classname" class="form-control">
         </div>
         <div class="form-group">
