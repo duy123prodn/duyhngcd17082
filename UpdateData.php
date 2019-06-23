@@ -45,7 +45,7 @@ if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email
   $email = $_POST['email'];
   $classname = $_POST['classname'];
 
-  $sql = 'UPDATE student SET stuid=:StudentID, fname=:fname, email=:email, classname=:classname WHERE stuid=:StudenID';
+  $sql = 'UPDATE student SET stuid=:StudentID, fname=:fname, email=:email, classname=:classname WHERE stuid=:StudentID';
   $stmt = $pdo->prepare($sql);
   if ($stmt->execute([':StudentID' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname]) )
   {
