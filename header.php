@@ -39,7 +39,7 @@
         <a class="nav-link" href="InsertData.php">Insert Data</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="ConnectToDB.php">Insert Data</a>
+        <a class="nav-link" href="ConnectToDB.php">List Database</a>
       </li>
       
       

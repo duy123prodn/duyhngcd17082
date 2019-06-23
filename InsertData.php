@@ -19,15 +19,18 @@ if (empty(getenv("DATABASE_URL"))){
 
 <?
 $message = '';
-if (isset($_POST['stuid']) && isset($_POST['fname'])  && isset($_POST['email']) && isset($_POST['classname']) ) {
-  $stuid = $_POST['stuid'];
+if (isset($_POST['Stuid']) && isset($_POST['fname'])  && isset($_POST['email']) && isset($_POST['classname']) ) {
+  $stuid = $_POST['Stuid'];
   $fname = $_POST['fname'];
   $email = $_POST['email'];
   $classname = $_POST['classname'];
-  $sql = 'INSERT INTO student(stuid, fname, email, classname) VALUES(:stuid, :fname, :email, :classname)';
+  $sql = 'INSERT INTO student(stuid, fname, email, classname) VALUES(:Stuid, :fname, :email, :classname)';
   $stmt = $pdo->prepare($sql);
-  if ($stmt->execute([':stuid' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname])) {
-    $message = 'data inserted successfully';
+  if ($stmt->execute([':Stuid' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname])) {
+    $message = 'Data inserted successfully';
+    else{
+      $message = 'Error';
+    }
   }
 }
 ?>
@@ -47,10 +50,10 @@ if (isset($_POST['stuid']) && isset($_POST['fname'])  && isset($_POST['email']) 
       <form method="post">
         <div class="form-group">
           <label for="name">ID</label>
-          <input type="text" name="stuid" id="stuid" class="form-control">
+          <input type="text" name="Stuid" id="stuid" class="form-control">
         </div>
         <div class="form-group">
-          <label for="name">Name</label>
+          <label for="name">Full Name</label>
           <input type="text" name="fname" id="fname" class="form-control">
         </div>
         <div class="form-group">
@@ -62,7 +65,7 @@ if (isset($_POST['stuid']) && isset($_POST['fname'])  && isset($_POST['email']) 
           <input type="text" name="classname" id="classname" class="form-control">
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-info">Insert</button>
+          <button type="submit" class="btn btn-info">Submit</button>
         </div>
       </form>
     </div>
