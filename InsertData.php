@@ -25,7 +25,24 @@ if (empty(getenv("DATABASE_URL"))){
 <h1>DATABASE CONNECTION</h1>
 
 
+<?
 
+$message = '';
+if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email']) && isset($_POST['classname']) ) 
+{
+  $stuid = $_POST['StudentID'];
+  $fname = $_POST['fname'];
+  $email = $_POST['email'];
+  $classname = $_POST['classname'];
+
+  $sql = 'INSERT INTO student(stuid, fname, email, classname) VALUES(:StudentID, :fname, :email, :classname)';
+  $stmt = $pdo->prepare($sql);
+  if ($stmt->execute([':StudentID' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname]) == TRUE) 
+  {
+    $message = 'Data inserted successfully;';
+  }
+}
+?>
 
 
 
