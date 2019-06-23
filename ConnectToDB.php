@@ -18,8 +18,19 @@ if (empty(getenv("DATABASE_URL"))){
         ltrim($db["path"], "/")
    ));
 
-
 }  
+
+$sql = 'SELECT * FROM student ORDER BY stuid' ;
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+//Thiết lập kiểu dữ liệu trả về
+$person = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+
+
+
+
+
 
 ?>
 
