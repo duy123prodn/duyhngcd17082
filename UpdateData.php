@@ -35,7 +35,7 @@ $name = $_GET['fname'];
 $email = $_GET['email'];
 $classname = $_GET['classname'];
 
-$sql = 'SELECT * FROM student WHERE stuid=:stuid, name=:name, email=:email, classname=:classname';
+$sql = 'SELECT * FROM student WHERE stuid=:stuid, fname=:fname, email=:email, classname=:classname';
 
 $stmt = $pdo->prepare($sql);
 
