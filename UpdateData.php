@@ -26,8 +26,8 @@ if (empty(getenv("DATABASE_URL"))){
 
 
 <?php 
-  $id = $_GET['StudenID'];
-$sql = 'SELECT * FROM student WHERE id=:StudenID';
+  $stuid = $_GET['StudenID'];
+$sql = 'SELECT * FROM student WHERE stuid=:StudenID';
 $stmt = $pdo->prepare($sql);
 $stmt->execute([':StudenID' => $id ]);
 $person = $stmt->fetch(PDO::FETCH_OBJ);
@@ -37,7 +37,7 @@ if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email
   $fname = $_POST['fname'];
   $email = $_POST['email'];
   $classname = $_POST['classname'];
-    $sql = 'UPDATE student SET stuid=:StudentID, fname=:fname, email=:email classname=:classname WHERE id=:StudenID';
+    $sql = 'UPDATE student SET stuid=:StudentID, fname=:fname, email=:email classname=:classname WHERE stuid=:StudenID';
   $stmt = $pdo->prepare($sql);
   if ($stmt->execute([':StudentID' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname]) )
   {
