@@ -30,13 +30,16 @@ s
 
 
 
-$stuid = $_GET['stuid'];
+$id = $_GET['stuid'];
+$name = $_GET['fname'];
+$email = $_GET['email'];
+$classname = $_GET['classname'];
 
-$sql = 'SELECT FROM student WHERE stuid=:stuid';
+$sql = 'SELECT * FROM student WHERE stuid=:stuid, name=:name, email=:email, classname=:classname';
 
 $stmt = $pdo->prepare($sql);
 
-$stmt->execute([':stuid' => $stuid ]);
+$stmt->execute([':stuid' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname ]);
 
 $person = $stmt->fetchAll(PDO::FETCH_OBJ);
 
@@ -44,20 +47,20 @@ $person = $stmt->fetchAll(PDO::FETCH_OBJ);
 
 
 
-if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email']) && isset($_POST['classname']) )
-{
-  $stuid = $_POST['StudentID'];
-  $fname = $_POST['fname'];
-  $email = $_POST['email'];
-  $classname = $_POST['classname'];
+// if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email']) && isset($_POST['classname']) )
+// {
+//   $stuid = $_POST['StudentID'];
+//   $fname = $_POST['fname'];
+//   $email = $_POST['email'];
+//   $classname = $_POST['classname'];
 
-  $sql = 'UPDATE student SET stuid=:StudentID, fname=:fname, email=:email, classname=:classname WHERE stuid=:StudentID';
-  $stmt = $pdo->prepare($sql);
-  if ($stmt->execute([':StudentID' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname]) )
-  {
-    header("Location: ConnectToDB.php");
-  }
-}
+//   $sql = 'UPDATE student SET stuid=:StudentID, fname=:fname, email=:email, classname=:classname WHERE stuid=:StudentID';
+//   $stmt = $pdo->prepare($sql);
+//   if ($stmt->execute([':StudentID' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname]) )
+//   {
+//     header("Location: ConnectToDB.php");
+//   }
+// }
 
 ?>
 
