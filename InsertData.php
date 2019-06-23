@@ -3,6 +3,13 @@
 <html>
     <head>
 <title>Insert data to PostgreSQL with php - creating a simple web application</title>
+<style type="text/css">
+      body{
+        background-image: url('../images/background.JPG');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+  </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style>
 li {
@@ -41,9 +48,7 @@ if (empty(getenv("DATABASE_URL"))){
    ));
 }  
 
-if($pdo === false){
-     echo "ERROR: Could not connect Database";
-}
+    
 
 //Khởi tạo Prepared Statement
 //$stmt = $pdo->prepare('INSERT INTO student (stuid, fname, email, classname) values (:id, :name, :email, :class)');
@@ -56,20 +61,25 @@ if($pdo === false){
 //$sql = "INSERT INTO student(stuid, fname, email, classname) VALUES('SV02', 'Hong Thanh','thanhh@fpt.edu.vn','GCD018')";
 $sql = "INSERT INTO student(stuid, fname, email, classname)"
         . " VALUES('$_POST[StudentID]','$_POST[fname]','$_POST[email]','$_POST[classname]')";
+
 $stmt = $pdo->prepare($sql);
  {
-
 //$stmt->execute();
  if (is_null($_POST[StudentID])) {
    echo "StudentID must be not null";
  }
  else
     if($stmt->execute() == TRUE){
-        echo "Record inserted successfully.";
+        echo "Successfully.";
     } else {
-        echo "Error inserting record: ";
+        echo "Error.: "
     }
  }
+
+
+ 
 ?>
+<p><a href="ConnectToDB.php" target="_blank">See the database</a></p>
+
 </body>
 </html>

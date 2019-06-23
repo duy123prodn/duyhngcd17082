@@ -14,15 +14,17 @@ if (empty(getenv("DATABASE_URL"))){
         $db["pass"],
         ltrim($db["path"], "/")
    ));
-}  
-?>
 
-<?
+
+}  
 $sql = 'SELECT * FROM people';
 $statement = $connection->prepare($sql);
 $statement->execute();
 $people = $statement->fetchAll(PDO::FETCH_OBJ);
- ?>
+
+?>
+
+
 <?php require 'header.php'; ?>
 <div class="container">
   <div class="card mt-5">
@@ -40,13 +42,13 @@ $people = $statement->fetchAll(PDO::FETCH_OBJ);
         </tr>
         <?php foreach($people as $person): ?>
           <tr>
-            <td><?= $person->id; ?></td>
+            <td><?= $person->stuid; ?></td>
             <td><?= $person->fname; ?></td>
             <td><?= $person->email; ?></td>
             <td><?= $person->classname; ?></td>
             <td>
-              <a href="UpdateData.php?id=<?= $person->id ?>" class="btn btn-info">Edit</a>
-              <a onclick="return confirm('Are you sure you want to delete this entry?')" href="DeleteData.php.php?id=<?= $person->id ?>" class='btn btn-danger'>Delete</a>
+              <a href="UpdateData.php?id=<?= $person->stuid ?>" class="btn btn-info">Edit</a>
+              <a onclick="return confirm('Are you sure you want to delete this entry?')" href="DeleteData.php.php?id=<?= $person->stuid ?>" class='btn btn-danger'>Delete</a>
             </td>
           </tr>
         <?php endforeach; ?>
