@@ -29,10 +29,10 @@ s
 
 $id = $_GET['stuid'];
 
-$sql = 'SELECT * FROM student WHERE stuid=:stuid ';
+$sql = 'SELECT * FROM student WHERE stuid=:StudentID';
 
 $stmt = $pdo->prepare($sql);
-$stmt->execute([':stuid' => $id ]);
+$stmt->execute([':StudentID' => $id ]);
 
 $person = $stmt->fetch(PDO::FETCH_OBJ);
 
