@@ -29,19 +29,7 @@ s
 
 
 
-
-$id = $_GET['stuid'];
-$name = $_GET['fname'];
-$email = $_GET['email'];
-$classname = $_GET['classname'];
-
-$sql = 'SELECT * FROM student WHERE stuid=:stuid, fname=:fname, email=:email, classname=:classname';
-
-$stmt = $pdo->prepare($sql);
-
-$stmt->execute([':stuid' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname ]);
-
-$person = $stmt->fetchAll(PDO::FETCH_OBJ);
+$sql = 'SELECT * FROM student WHERE stuid=:stuid';
 
 
 
