@@ -46,10 +46,10 @@ $resultSet = $stmt->fetchAll(PDO::FETCH_OBJ);
         </tr>
         <?php foreach($resultSet as $person): ?>
           <tr>
-            <td><?= $resultSet->stuid; ?></td>
-            <td><?= $resultSet->fname; ?></td>
-            <td><?= $resultSet->email; ?></td>
-            <td><?= $resultSet->classname; ?></td>
+            <td><?= $person->stuid; ?></td>
+            <td><?= $person->fname; ?></td>
+            <td><?= $person->email; ?></td>
+            <td><?= $person->classname; ?></td>
             <td>
               <a href="UpdateData.php?stuid=<?= $resultSet->stuid ?>" class="btn btn-info">Edit</a>
               <a onclick="return confirm('Are you sure you want to delete this entry?')" href="DeleteData.php.php?stuid=<?= $resultSet->stuid ?>" class='btn btn-danger'>Delete</a>
