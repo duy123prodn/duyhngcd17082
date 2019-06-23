@@ -66,8 +66,8 @@ if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email
             <td><?= $person->email; ?></td>
             <td><?= $person->classname; ?></td>
             <td>
-              <a href="UpdateData.php?id=<?= $person->stuid ?>" class="btn btn-info">Edit</a>
-              <a onclick="return confirm('Are you sure you want to delete this entry?')" href="DeleteData.php?id=<?= $person->stuid ?>" class='btn btn-danger'>Delete</a>
+              <a href="UpdateData.php?stuid=<?= $person->stuid ?>" class="btn btn-info">Edit</a>
+              <a onclick="return confirm('Are you sure you want to delete this entry?')" href="DeleteData.php?stuid=<?= $person->stuid ?>" class='btn btn-danger'>Delete</a>
             </td>
           </tr>
         <?php endforeach; ?>
@@ -76,4 +76,3 @@ if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email
   </div>
 </div>
 
-<? require 'footter.php';?>
