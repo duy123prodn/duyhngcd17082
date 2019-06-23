@@ -20,11 +20,14 @@ if (empty(getenv("DATABASE_URL"))){
 
 }  
 
+
+
+
 $sql = 'SELECT * FROM student ORDER BY stuid' ;
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 //Thiết lập kiểu dữ liệu trả về
-$person = $stmt->fetchAll(PDO::FETCH_OBJ);
+$resultSet = $stmt->fetchAll(PDO::FETCH_OBJ);
 
 
 
@@ -64,3 +67,4 @@ $person = $stmt->fetchAll(PDO::FETCH_OBJ);
     </div>
   </div>
 </div>
+<?php require 'footer.php'; ?>
