@@ -21,7 +21,7 @@ if (empty(getenv("DATABASE_URL"))){
 
 }  
 
-$sql = 'SELECT * FROM student';
+$sql = 'SELECT * FROM student ORDER BY stuid' ;
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 //Thiết lập kiểu dữ liệu trả về
@@ -51,8 +51,8 @@ $resultSet = $stmt->fetchAll(PDO::FETCH_OBJ);
             <td><?= $person->email; ?></td>
             <td><?= $person->classname; ?></td>
             <td>
-              <a href="UpdateData.php?stuid=<?= $resultSet->stuid ?>" class="btn btn-info">Edit</a>
-              <a onclick="return confirm('Are you sure you want to delete this entry?')" href="DeleteData.php.php?stuid=<?= $resultSet->stuid ?>" class='btn btn-danger'>Delete</a>
+              <a href="UpdateData.php?id=<?= $person->stuid ?>" class="btn btn-info">Edit</a>
+              <a onclick="return confirm('Are you sure you want to delete this entry?')" href="DeleteData.php.php?id=<?= $person->stuid ?>" class='btn btn-danger'>Delete</a>
             </td>
           </tr>
         <?php endforeach; ?>
