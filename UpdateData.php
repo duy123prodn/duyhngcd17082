@@ -23,7 +23,7 @@ if (empty(getenv("DATABASE_URL"))){
 
 <?php require 'header.php'; ?>
 <h1>Updata Information</h1>
-
+s
 
 <?php 
 
@@ -87,3 +87,4 @@ if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email
     </div>
   </div>
 </div>
+<?php require 'footer.php'; ?>
