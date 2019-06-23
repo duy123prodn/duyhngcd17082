@@ -1,35 +1,35 @@
 <?php
-
 if (empty(getenv("DATABASE_URL"))){
     echo '<p>The DB does not exist</p>';
-    $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=duyhngcd17082', 'postgres', '123456');
+    $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', '123456');
 }  else {
      
    $db = parse_url(getenv("DATABASE_URL"));
    $pdo = new PDO("pgsql:" . sprintf(
-        "host=ec2-54-225-72-238.compute-1.amazonaws.com;port=5432;user=xajjrlkdrlahpp;password=b5cd985b527ee9c10e0b2ad61c6e659276f46ee188a13b97bd8bbfe186c6800f;dbname=dalogq746t98vp",
+        "host=ec2-174-129-240-67.compute-1.amazonaws.com;port=5432;user=wrflrxtavasvqh;password=fbfef36049fbd28f1200e3a775a389e014838e86522765e67782f9cf7a3f516b;dbname=d3mmhribgmc6bf",
         $db["host"],
         $db["port"],
         $db["user"],
         $db["pass"],
         ltrim($db["path"], "/")
    ));
+}  
+if($pdo === false){
+     echo "ERROR: Could not connect Database";
 }
-?>
 
-<?
 $message = '';
-if (isset($_POST['Stuid']) && isset($_POST['fname'])  && isset($_POST['email']) && isset($_POST['classname']) ) {
-  $stuid = $_POST['Stuid'];
+if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email']) && isset($_POST['classname']) ) {
+  $stuid = $_POST['StudentID'];
   $fname = $_POST['fname'];
   $email = $_POST['email'];
   $classname = $_POST['classname'];
-  $sql = 'INSERT INTO student(stuid, fname, email, classname) VALUES(:Stuid, :fname, :email, :classname)';
+  $sql = 'INSERT INTO student(stuid, fname, email, classname) VALUES(:StudentID, :fname, :email, :classname)';
   $stmt = $pdo->prepare($sql);
-  if ($stmt->execute([':Stuid' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname])) {
-    $message = 'Data inserted successfully';
+  if ($stmt->execute([':StudentID' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname]) == TRUE) {
+    $message = 'Data inserted successfully;';
     else{
-      $message = 'Error';
+      $message = 'Error;';
     }
   }
 }
@@ -50,7 +50,7 @@ if (isset($_POST['Stuid']) && isset($_POST['fname'])  && isset($_POST['email']) 
       <form method="post">
         <div class="form-group">
           <label for="name">ID</label>
-          <input type="text" name="Stuid" id="stuid" class="form-control">
+          <input type="text" name="StudentID" id="stuid" class="form-control">
         </div>
         <div class="form-group">
           <label for="name">Full Name</label>
