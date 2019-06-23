@@ -29,7 +29,14 @@ s
 
 
 
+
 $sql = 'SELECT * FROM student WHERE stuid=:stuid';
+
+$stmt = $pdo->prepare($sql);
+
+$stmt->execute();
+
+$person = $stmt->fetchAll(PDO::FETCH_OBJ);
 
 
 
