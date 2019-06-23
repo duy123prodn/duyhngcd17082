@@ -26,7 +26,7 @@ if (empty(getenv("DATABASE_URL"))){
 
 
 <?php 
-  $stuid = $_GET['StudenID'];
+  $stuid = $_GET['stuid'];
 $sql = 'SELECT * FROM student WHERE stuid=:StudenID';
 $stmt = $pdo->prepare($sql);
 $stmt->execute([':StudenID' => $id ]);
