@@ -1,63 +1,39 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-<title></title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<style>
-li {
-list-style: none;
-}
-</style>
-</head>
-<body>
-
-<h1>DATABASE CONNECTION</h1>
-
 <?php
-ini_set('display_errors', 1);
-echo "Hello Cloud computing class 0818!";
-?>
-
-<?php
-
-
-if (empty(getenv("DATABASE_URL"))){
-    echo '<p>The DB does not exist</p>';
-    $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=duyhngcd17028', 'postgres', '123456');
-}  else {
-     echo '<p>The DB exists</p>';
-     echo getenv("dbname");
-   $db = parse_url(getenv("DATABASE_URL"));
-   $pdo = new PDO("pgsql:" . sprintf(
-        "host=ec2-54-225-72-238.compute-1.amazonaws.com;port=5432;user=xajjrlkdrlahpp;password=b5cd985b527ee9c10e0b2ad61c6e659276f46ee188a13b97bd8bbfe186c6800f;dbname=dalogq746t98vp",
-        $db["host"],
-        $db["port"],
-        $db["user"],
-        $db["pass"],
-        ltrim($db["path"], "/")
-   ));
-}  
-
-$sql = "SELECT * FROM student ORDER BY stuid";
-$stmt = $pdo->prepare($sql);
-//Thiết lập kiểu dữ liệu trả về
-$stmt->setFetchMode(PDO::FETCH_ASSOC);
-$stmt->execute();
-$resultSet = $stmt->fetchAll();
-echo '<p>Students information:</p>';
-foreach ($resultSet as $row) {
-	   echo $row['stuid'];
-        echo "    ";
-        echo $row['fname']; 
-        echo "    ";
-        echo $row['email'];
-        echo "    ";
-        echo $row['classname'];
-        echo '<li><a href="DeleteData1.php">Delete</a></li>';
-        echo "<br/>";
-}
-
-?>
-</body>
-</html>
+require 'db.php';
+$sql = 'SELECT * FROM people';
+$statement = $connection->prepare($sql);
+$statement->execute();
+$people = $statement->fetchAll(PDO::FETCH_OBJ);
+ ?>
+<?php require 'header.php'; ?>
+<div class="container">
+  <div class="card mt-5">
+    <div class="card-header">
+      <h2>All people</h2>
+    </div>
+    <div class="card-body">
+      <table class="table table-bordered">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Class</th>
+          <th>Action</th>
+        </tr>
+        <?php foreach($people as $person): ?>
+          <tr>
+            <td><?= $person->id; ?></td>
+            <td><?= $person->fname; ?></td>
+            <td><?= $person->email; ?></td>
+            <td><?= $person->classname; ?></td>
+            <td>
+              <a href="UpdateData.php?id=<?= $person->id ?>" class="btn btn-info">Edit</a>
+              <a onclick="return confirm('Are you sure you want to delete this entry?')" href="DeleteData.php.php?id=<?= $person->id ?>" class='btn btn-danger'>Delete</a>
+            </td>
+          </tr>
+        <?php endforeach; ?>
+      </table>
+    </div>
+  </div>
+</div>
+<?php require 'footer.php'; ?>

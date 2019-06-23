@@ -1,26 +1,8 @@
-<html>
- <head>
-  <title>Duy's Simple Website</title>
-  <style type="text/css">
-      body{
-        background-image: url('../images/background.JPG');
-        background-repeat: no-repeat;
-        background-size: cover;
+<?php require 'header.php'; ?>
 
-  </style>
-  <?php echo '<h1 style="color: white; text-align: center">Hello <3 Welcome to my Website</h1>'
-  ?>
-  <?php echo '<h2 style="color: white; text-align: center">Thank you for coming here ! </h2>'
-  ?>
-  <?php echo '<h3 style="color: green; text-align: center"> <a href="https://www.facebook.com/duy123prodn" target="_blank"> ==> LINK TO MY FACEBOOK <== </a></h3>'
-  ?>
-  
- </head>
- 
- <body>
     <h2><span>S</span>ome Informations about me:</h2>
     <div id="content0" class="container0" style="width: 850px; padding: 10px;">
-        <div id="content" class="container" style="width: 550px; padding: 10px; float: left;">
+        <div id="content1" class="container1" style="width: 550px; padding: 10px; float: left;">
             
                     <div id="pictute" style="width: 240px; height: 300px; border-color: black; border: dashed; float:left;">
 
@@ -45,14 +27,12 @@
         <div id="data" style="width: 240px; height: 300px; padding: 11px ; float: right;">
             <ul  style="padding: 1px;">
             <p>Connect to Database Function:</p>
-            <p><a href="InsertData.php" target="_blank">Give me Your Informations. Thank you ! </a></p>
-            <p><a href="ConnectToDB.php" target="_blank">Connect to Database</a></p>
-            <p><a href="UpdateData.php" target="_blank">Update Data</a></p>
-            <p><a href="DeleteData.php" target="_blank">Delete Data</a></p>
+            <!-- <p><a href="InsertData.php" target="_blank">Give me Your Informations. Thank you ! </a></p> -->
+            <p><a href="ConnectToDB.php" target="_blank">See the database</a></p>
+          <!--   <p><a href="UpdateData.php" target="_blank">Update Data</a></p>
+            <p><a href="DeleteData.php" target="_blank">Delete Data</a></p> -->
             </ul>
         </div>
         <dir class="clear0" style=" clear: both;"></dir>
     </div>
-            
- </body>
-</html>
+<?php require 'footer.php'; ?>
