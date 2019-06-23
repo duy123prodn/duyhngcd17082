@@ -1,7 +1,3 @@
-
-<?php require 'header.php'; ?>
-<h1>DATABASE CONNECTION</h1>
-
 <?php
 
 if (empty(getenv("DATABASE_URL"))){
@@ -19,9 +15,15 @@ if (empty(getenv("DATABASE_URL"))){
         ltrim($db["path"], "/")
    ));
 }  
-if($pdo === false){
-     echo "ERROR: Could not connect Database";
+
 ?>
+
+
+
+
+<?php require 'header.php'; ?>
+<h1>DATABASE CONNECTION</h1>
+
 
 
 
