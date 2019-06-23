@@ -1,3 +1,6 @@
+<?php require 'header.php'; ?>
+<h1>DATABASE CONNECTION</h1>
+
 <?php
 
 if (empty(getenv("DATABASE_URL"))){
@@ -17,10 +20,15 @@ if (empty(getenv("DATABASE_URL"))){
 
 
 }  
-$sql = 'SELECT * FROM student';
-$statement = $connection->prepare($sql);
-$statement->execute();
-$people = $statement->fetchAll(PDO::FETCH_OBJ);
+
+$sql = "SELECT * FROM student ORDER BY stuid";
+$stmt = $pdo->prepare($sql);
+//Thiết lập kiểu dữ liệu trả về
+$stmt->setFetchMode(PDO::FETCH_ASSOC);
+$stmt->execute();
+$resultSet = $stmt->fetchAll();
+
+?>
 
 ?>
 <div class="container">
@@ -37,15 +45,15 @@ $people = $statement->fetchAll(PDO::FETCH_OBJ);
           <th>Class</th>
           <th>Action</th>
         </tr>
-        <?php foreach($people as $person): ?>
+        <?php foreach($resultSet as $person): ?>
           <tr>
-            <td><?= $person->stuid; ?></td>
-            <td><?= $person->fname; ?></td>
-            <td><?= $person->email; ?></td>
-            <td><?= $person->classname; ?></td>
+            <td><?= $resultSet->stuid; ?></td>
+            <td><?= $resultSet->fname; ?></td>
+            <td><?= $resultSet->email; ?></td>
+            <td><?= $resultSet->classname; ?></td>
             <td>
-              <a href="UpdateData.php?id=<?= $person->stuid ?>" class="btn btn-info">Edit</a>
-              <a onclick="return confirm('Are you sure you want to delete this entry?')" href="DeleteData.php.php?id=<?= $person->stuid ?>" class='btn btn-danger'>Delete</a>
+              <a href="UpdateData.php?stuid=<?= $resultSet->stuid ?>" class="btn btn-info">Edit</a>
+              <a onclick="return confirm('Are you sure you want to delete this entry?')" href="DeleteData.php.php?stuid=<?= $resultSet->stuid ?>" class='btn btn-danger'>Delete</a>
             </td>
           </tr>
         <?php endforeach; ?>
@@ -53,3 +61,5 @@ $people = $statement->fetchAll(PDO::FETCH_OBJ);
     </div>
   </div>
 </div>
+
+<? require 'footter.php';?>
