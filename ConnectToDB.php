@@ -21,12 +21,11 @@ if (empty(getenv("DATABASE_URL"))){
 
 }  
 
-$sql = "SELECT * FROM student ORDER BY stuid";
+$sql = 'SELECT * FROM student';
 $stmt = $pdo->prepare($sql);
-//Thiết lập kiểu dữ liệu trả về
-$stmt->setFetchMode(PDO::FETCH_ASSOC);
 $stmt->execute();
-$resultSet = $stmt->fetchAll();
+//Thiết lập kiểu dữ liệu trả về
+$resultSet = $stmt->fetchAll(PDO::FETCH_OBJ);
 
 ?>
 
@@ -34,7 +33,7 @@ $resultSet = $stmt->fetchAll();
 <div class="container">
   <div class="card mt-5">
     <div class="card-header">
-      <h2>All people</h2>
+      <h2>List Database</h2>
     </div>
     <div class="card-body">
       <table class="table table-bordered">
