@@ -30,13 +30,13 @@ s
 
 
 
-$sql = 'SELECT * FROM student WHERE stuid=:stuid';
+$sql = 'SELECT * FROM student WHERE stuid= $_GET['stuid'] ';
 
 $stmt = $pdo->prepare($sql);
 
 $stmt->execute();
 
-$person = $stmt->fetchAll(PDO::FETCH_OBJ);
+$person = $stmt->fetch(PDO::FETCH_OBJ);
 
 
 
