@@ -1,33 +1,4 @@
-<?php 
-	include 'ConnectToDB.php';
-?>
-<!DOCTYPE html>
-<html>
-    <head>
-<title>Delete by using ID</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<style>
-li {
-list-style: none;
-}
-</style>
-</head>
-<body>
-<h1>DELETE DATA FROM DATABASE</h1>
-<h2>Delete data from student table</h2>
-<ul>
-    <form name="DeleteData" action="DeleteData.php" method="POST" >
-<li>Enter Student ID you want to delete:</li><li><input type="text" name="studentid" /></li>
-<li><input type="submit" /></li>
-</form>
-</ul>
-
 <?php
-ini_set('display_errors', 1	);
-?>
-
-<?php
-
 
 if (empty(getenv("DATABASE_URL"))){
     echo '<p>The DB does not exist</p>';
@@ -43,24 +14,16 @@ if (empty(getenv("DATABASE_URL"))){
         $db["pass"],
         ltrim($db["path"], "/")
    ));
-} 
 
-if($pdo === false){
-     echo "ERROR: Could not connect Database";
-}
-
-
-$sql = "DELETE FROM student WHERE stuid = '<php echo $row['stuid']?>'";
-$stmt = $pdo->prepare($sql);
-{
-//$stmt->execute();
- 
-    if($stmt->execute() == TRUE){
-        echo "Record Deleted successfully.";
-    } else {
-        echo "Error Deleting record.";
-    }
- }
+}  
 ?>
-</body>
-</html>
+
+
+<?php
+$id = $_GET['id'];
+$sql = 'DELETE FROM student WHERE id=:id';
+$stmt = $pdo->prepare($sql);
+if ($stmt->execute([':id' => $id])) {
+  header("Location: ConnectToDB");
+}
+?>
