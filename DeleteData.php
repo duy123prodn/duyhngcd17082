@@ -24,6 +24,6 @@ $id = $_GET['id'];
 $sql = 'DELETE FROM student WHERE id=:id';
 $stmt = $pdo->prepare($sql);
 if ($stmt->execute([':id' => $id])) {
-  header("Location: ConnectToDB");
+  header("Location: ConnectToDB.php");
 }
 ?>
