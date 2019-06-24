@@ -28,26 +28,18 @@ s
 <?php 
 
 $id = $_GET['id'];
-
 $sql = 'SELECT * FROM student WHERE id=:id ';
-
 $stmt = $pdo->prepare($sql);
-
 $stmt->execute([':id' => $id ]);
-
 $person = $stmt->fetch(PDO::FETCH_OBJ);
-
-if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email']) && isset($_POST['classname']) )
-{
+if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email']) && isset($_POST['classname']) ) {
   $stuid = $_POST['StudentID'];
   $fname = $_POST['fname'];
-  $email = $_POST['email'];
+  $email = $_POST['email']; 
   $classname = $_POST['classname'];
-
   $sql = 'UPDATE student SET stuid=:StudentID, fname=:fname, email=:email, classname=:classname WHERE id=:id';
   $stmt = $pdo->prepare($sql);
-  if ($stmt->execute([':StudentID' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname]) )
-  {
+  if ($stmt->execute([':StudentID' => $stuid, ':fname' => $fname, ':email' => $email, ':classname' => $classname]) ){
     header("Location: ConnectToDB.php");
   }
 }
