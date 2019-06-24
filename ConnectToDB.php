@@ -23,7 +23,7 @@ if (empty(getenv("DATABASE_URL"))){
 
 
 
-$sql = 'SELECT * FROM student ORDER BY stuid' ;
+$sql = 'SELECT * FROM student ORDER BY id' ;
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 //Thiết lập kiểu dữ liệu trả về
@@ -46,7 +46,8 @@ $resultSet = $stmt->fetchAll(PDO::FETCH_OBJ);
       <table class="table table-bordered">
         <tr>
           <th>ID</th>
-          <th>Name</th>
+          <th>Student ID</th>
+          <th>Full Name</th>
           <th>Email</th>
           <th>Class</th>
           <th>Action</th>
