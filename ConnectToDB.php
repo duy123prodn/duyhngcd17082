@@ -45,7 +45,6 @@ $resultSet = $stmt->fetchAll(PDO::FETCH_OBJ);
     <div class="card-body">
       <table class="table table-bordered">
         <tr>
-          <th>ID</th>
           <th>Student ID</th>
           <th>Full Name</th>
           <th>Email</th>

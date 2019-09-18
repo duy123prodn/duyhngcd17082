@@ -61,7 +61,7 @@ if (isset($_POST['StudentID']) && isset($_POST['fname'])  && isset($_POST['email
       <?php endif; ?>
       <form method="post">
         <div class="form-group">
-          <label for="id">ID</label>
+          <label for="id">Student ID</label>
           <input type="text" name="StudentID" id="stuid" class="form-control">
         </div>
         <div class="form-group">
