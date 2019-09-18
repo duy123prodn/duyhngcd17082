@@ -53,7 +53,6 @@ $resultSet = $stmt->fetchAll(PDO::FETCH_OBJ);
         </tr>
         <?php foreach($resultSet as $person): ?>
           <tr>
-             <td><?= $person->id; ?></td>
             <td><?= $person->stuid; ?></td>
             <td><?= $person->fname; ?></td>
             <td><?= $person->email; ?></td>
